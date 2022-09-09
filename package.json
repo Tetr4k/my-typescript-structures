@@ -1,0 +1,19 @@
+{
+  "name": "my-typescript-structures",
+  "version": "1.0.0",
+  "description": "Customized implementation of some data structures(and others)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tetr4k/my-typescript-structures.git"
+  },
+  "author": "Tetr4k",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tetr4k/my-typescript-structures/issues"
+  },
+  "homepage": "https://github.com/Tetr4k/my-typescript-structures#readme"
+}
