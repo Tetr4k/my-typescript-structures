@@ -17,8 +17,4 @@ export class Stack<T>{
 	get size(): number{
 		return this.stack.length;
 	}
-
-	public toString(){
-		return this.stack.join(" ");
-	}
 }
