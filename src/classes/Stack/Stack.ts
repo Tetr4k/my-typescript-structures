@@ -14,7 +14,7 @@ export class Stack<T>{
 		return true;
 	}
 
-	get length(): number{
+	get size(): number{
 		return this.stack.length;
 	}
 
