@@ -13,6 +13,10 @@ export class Stack<T>{
 		this.stack.push(value);
 		return true;
 	}
+	
+	public isEmpty(): boolean{
+		return this.stack.length == 0
+	}
 
 	get size(): number{
 		return this.stack.length;
