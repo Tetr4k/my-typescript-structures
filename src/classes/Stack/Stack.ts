@@ -5,19 +5,31 @@ export class Stack<T>{
 		this.stack = new Array<T>();
 	}
 
+	/**
+	 * @returns The top element from the Stack
+	 */
 	public pop(): T | undefined{
 		return this.stack.pop();
 	}
 
-	public push(value: T): boolean{
-		this.stack.push(value);
-		return true;
-	}
-	
-	public isEmpty(): boolean{
-		return this.stack.length == 0
+	/**
+	 * @param elem Stacks a new element 
+	 * @returns The size of the Stack after pushing
+	 */
+	public push(elem: T): number{
+		return this.stack.push(elem);
 	}
 
+	/**
+	 * @returns A boolean value
+	 */
+	public isEmpty(): boolean{
+		return this.stack.length == 0;
+	}
+
+	/**
+	 *  @returns The size of the Stack
+	 */
 	get size(): number{
 		return this.stack.length;
 	}
