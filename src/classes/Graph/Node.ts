@@ -1,7 +1,10 @@
 export class Node<T>{
 	private id: number;
 	private data: T | undefined;
-	private adjacent: Array<Node<T>>;
+	private adjacent: Array<{
+		next: Node<T>,
+		weight: any
+	}>;
 
 	private static count = 0;
 
@@ -20,16 +23,22 @@ export class Node<T>{
 		return this.data;
 	}
 
-	get adjacents(): Array<Node<T>>{
+	get adjacents(): Array<{
+		next: Node<T>,
+		weight: any
+	}>{
 		return this.adjacent;
 	}
 
-	public push(node: Node<T>){
-		this.adjacent.push(node);
+	public push(node: Node<T>, weight?:number){
+		this.adjacent.push({
+			next: node,
+			weight: weight
+		});
 		return true;
 	}
 
 	public toString(): string{
-		return this.id.toString().concat(": ", this.adjacent.map(elem => elem.id.toString()).join(", "));
+		return this.id.toString().concat(": ", this.adjacent.map(elem => elem.next.id.toString()).join(", "));
 	}
 }
